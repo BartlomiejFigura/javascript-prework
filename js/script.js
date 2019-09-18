@@ -1,8 +1,6 @@
 function playGame (playerInput){
 
-    function clearMessages(){
-        document.getElementById('messages').innerHTML = '';
-    }
+    clearMessages();
 
     let randomNumber = Math.floor(Math.random() * 3 + 1);
 
