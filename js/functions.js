@@ -1,4 +1,4 @@
-function getMoveName(argMoveId){
+ const getMoveName = function(argMoveId){
 	if(argMoveId == 1){
 	  return 'kamień';
 	}
@@ -15,7 +15,7 @@ function getMoveName(argMoveId){
   
 }
 
-function displayResult(argComputerMove, argPlayerMove)  {
+const displayResult = function(argComputerMove, argPlayerMove)  {
 	if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
 		printMessage('Ty wygrywasz!');
 	}
@@ -37,17 +37,15 @@ function displayResult(argComputerMove, argPlayerMove)  {
 	if( argComputerMove == argPlayerMove){
 		printMessage('Remis');
 	}
-	if(argPlayerMove == 'nieznany ruch') {
-		printMessage('Świetnie, że próbujesz nieszablonowych rzeczy, zagraj jeszcze raz ;)');
-	}
+
 }
 
-function printMessage(msg){
+const printMessage = function(msg){
 	var div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
 
-function clearMessages(){
+const clearMessages = function(){
 	document.getElementById('messages').innerHTML = '';
 }
