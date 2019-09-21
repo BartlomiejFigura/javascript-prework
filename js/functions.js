@@ -14,7 +14,6 @@
 	}
   
 }
-
 const displayResult = function(argComputerMove, argPlayerMove)  {
 	if( argComputerMove == argPlayerMove){
 		printMessage('Remis');
@@ -26,30 +25,12 @@ const displayResult = function(argComputerMove, argPlayerMove)  {
 	else {
 		printMessage('Przegrywasz :(');
 	}
-	/*if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
-		printMessage('Ty wygrywasz!');*/
-	/*}
-	else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
-		printMessage('Przegrywasz :(');
-	}
-	/*if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
-		printMessage('Ty wygrywasz!');
-	}*/
-	/*else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
-		printMessage('Przegrywasz :(');
-	}*/
-	/*if( argComputerMove == argPlayerMove){
-		printMessage('Remis');
-	}*/
-
 }
-
 const printMessage = function(msg){
 	var div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
-
 const clearMessages = function(){
 	document.getElementById('messages').innerHTML = '';
 }
